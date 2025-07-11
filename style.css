@@ -1,0 +1,310 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; 
+    font-family: "Open Sans", sans-serif;
+}
+.container{
+    width: 100%;
+   
+    position: relative;
+     /* background-image:linear-gradient(to right, #303A52,#596174);  */
+     background-color:#FDFBF9;
+    
+    
+    
+}
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-image: linear-gradient(to right,rgb(225, 107, 164),rgb(126, 186, 218));
+    border-bottom: solid 8px;
+    border-color: rgb(236, 99, 159);
+}
+.logo{
+    width: 10%;
+     margin-left: 2rem;
+}
+.list-items{
+    display: inline;
+    text-decoration:none ;
+    margin: 0% 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: bisque;
+
+}
+.links{
+    text-decoration: none;
+    color: bisque;
+}
+nav:hover .logo{
+    animation: move 3s;
+}
+@keyframes move {
+    0%{margin-left: 0%;}
+    50%{margin-left: 68%;}
+    100%{margin-left: 0%;}
+}
+.links:hover {
+    color: rgba(0, 0, 0, 0.778);
+    text-decoration: underline;
+}
+/* home */
+#home{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8% 8% 0% 10%;
+    
+}
+.myimg{
+    width: 35%;
+    margin-top: 50px;
+   margin-left: 30%;
+  
+    transition: transform 2s ease; 
+     box-shadow: 0 4px 10px rgba(0, 1, 0, 0.3);
+  
+}
+.myimg:hover{
+    transform: scale(1.2);/*zoom in by 20% */
+}
+#username{
+   font-family: "Dancing Script", cursive;
+  font-size: 50px;
+   font-weight: 900;
+   color: #1A1A1A;
+   margin-top: 30px;
+}
+
+
+#lname{
+  font-family: "Dancing Script", cursive;
+   font-size: 100px;
+   font-weight: 1000;
+   color: #3B4D9D;
+     
+}
+#user-details{
+    margin-top: 50px;
+    width: 85%;
+    font-size: 50px;
+    font-weight: 600;
+    color: #1A1A1A;
+   font-family: "Dancing Script", cursive;
+   word-spacing: 1rem;
+   white-space: nowrap;
+   margin: 0% 20%;
+   
+}
+#download{
+    text-decoration: none;
+    display: inline-block;
+    color: #FDFBF9;;
+   background: linear-gradient(to right, #FF8A65, #FFAB91);
+     box-shadow: 0 4px 10px rgba(255, 138, 101, 0.3);
+ border-radius: 5px;
+    padding: 1%;
+   font-weight: 800;
+ transition: transform 0.3s ease; /*ease is a timing function that makes the animation start slow, then speed up in the middle, and finally slow down at the end.*/
+    margin: 4% 21% 0% 40%;
+}
+#download:hover{
+    cursor: pointer;
+     transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(255, 138, 101, 0.5);
+  background: linear-gradient(to right, #FF7043, #FFCCBC);
+}
+/*--------------------------------------- about ----------------------------------*/
+/* ------------------------------------------------------------------------------ */
+/*---------------------- demos------------------ */
+ #more {
+      display: none;/*This hides the checkbox input element with the ID toggle-details from being visible on the page */
+      
+    }
+.info{
+      max-height: 0; /*Collapses the space completely */
+    overflow: hidden;/*It hides any part of the content that goes outside the container’s set dimensions */
+    transition: max-height 0.5s ease-out, padding 0.3s;
+      opacity: 0;/* to hide the info */
+}
+.more-details {
+      display: inline-block;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+.more-details:hover {
+      background-color: #0056b3;
+    }
+#more:checked + .more-details + .info{
+    /* The + symbol in CSS is called the adjacent sibling combinator */
+    /* checked pseudo-class in CSS is a powerful way to detect when an input element (like a checkbox or radio button) is checked */
+     /* example > A + B  Select element B, but only if it comes immediately after element A in the HTML.  */
+        
+
+      max-height: 500px;
+      padding-top: 20px;
+      opacity: 1; /* defines how transparent an element is.*/
+}
+#about{
+   
+    margin: 8% 8% 0% 8%;
+}
+.aboutnav{
+    text-align: center;
+    
+   
+}
+.aboutstyl{
+    font-size: 40px;
+    font-weight: 600;
+    color: #1A1A1A;
+    font-family: "Oswald", sans-serif;
+}
+.img3{
+    width: 80%;
+    box-shadow: 0 4px 10px rgb(126, 186, 218);
+}
+.pandimg{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: center;
+    margin: 5% 8% 0 5%;
+}
+.infobox{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.infobox>span{ /* > Selects direct children only*/
+    margin-left: 1rem;
+}
+.p{
+    font-size: 17px;
+    text-align: justify;
+}
+/* skill */
+#skill{
+    margin: 8% 8% 0% 8%;
+}
+.barimg{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 10rem;
+    margin-top: 5%;
+   
+}
+.img4{
+     width: 80%;
+    box-shadow: 0 4px 10px rgb(225, 107, 164);
+    margin-left: 26%;
+   
+}
+.bars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.bar{
+    position: absolute;
+    background-color:rgb(126, 186, 218);
+    width: 100%;
+    height: .5rem;
+}
+.barvs{
+    background-color: rgb(225, 107, 164);
+    width: 96%;
+}
+.bargit{
+    background-color: rgb(225, 107, 164);
+    width: 70%;
+}
+.barmongo{
+    background-color: rgb(225, 107, 164);
+    width: 16%;
+}
+.barscript{
+    background-color: rgb(225, 107, 164);
+    width: 10%;
+}
+.barhead , .barpercent{
+    padding-bottom: 3rem;
+}
+#contact{
+    margin: 8% 8% 0 8%;
+}
+.iconcollector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.icon{
+     width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0px 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: all 1s ease-in-out;
+}
+.icon:hover {
+    cursor: pointer;
+     transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(138, 35, 74, 0.5);
+  background: linear-gradient(to right, rgb(225, 107, 164),rgb(126, 186, 218));
+  color: bisque;
+}
+.brands{
+    font-size: 2rem;
+    color: #1A1A1A;
+}
+.icon:hover .brands{
+    color: bisque;
+}
+footer{
+    margin-top: 8%;
+    
+}
+.copyright{
+    text-align: center;
+    font-weight: 600;
+    color: r#1A1A1A;
+}
+
+
+
+
+
+/* scrol bar designs */
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(225, 107, 164);
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(126, 186, 218);
+}
+
+
